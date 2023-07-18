@@ -4,7 +4,7 @@ import { devtools, persist } from 'zustand/middleware';
 interface User {
   name: string;
   email: string;
-  token: string
+  token: string;
 }
 
 type SessionState = {
@@ -41,15 +41,17 @@ export const sessionStore = createStore<SessionState>()(
     {
       name: 'session',
       onRehydrateStorage: () => (state) => {
-        console.log(state);        
+        console.log(state);
       },
     },
   ),
 );
 
-export const useAuthToken = () => useStore(sessionStore, (state) => state.user?.token);
+export const useAuthToken = () =>
+  useStore(sessionStore, (state) => state.user?.token);
 
-export const useCurrentUser = () => useStore(sessionStore, (state) => state.user);
+export const useCurrentUser = () =>
+  useStore(sessionStore, (state) => state.user);
 
 export const addUser = (user: User) => sessionStore.getState().addUser(user);
 

@@ -7,20 +7,19 @@ const baseApi = axios.create({
 });
 
 baseApi.interceptors.request.use(
-  config => {
-    const token = sessionStore.getState()?.user?.token;              
-    config.headers.Authorization = `Bearer ${token}`;      
-    return  config;
-  }
-  ,
-  error => Promise.reject(error),
+  (config) => {
+    const token = sessionStore.getState()?.user?.token;
+    config.headers.Authorization = `Bearer ${token}`;
+    return config;
+  },
+  (error) => Promise.reject(error),
 );
 
 // const UNAUTHORIZED_STATUS = 401;
 
 baseApi.interceptors.response.use(
-  response => response,
-  error => {
+  (response) => response,
+  (error) => {
     console.log(error);
     // if (error?.response?.status === UNAUTHORIZED_STATUS) {
     //   console.log(error);

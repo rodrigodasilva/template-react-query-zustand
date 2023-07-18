@@ -3,7 +3,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { FullPageError } from '~shared/components/full-page-error';
 import { QueryClientProvider } from './QueryClientProvider';
 import { Router } from './RouterProvider';
- 
 
 export function Provider() {
   return (
@@ -16,4 +15,3 @@ export function Provider() {
     </ErrorBoundary>
   );
 }
- 

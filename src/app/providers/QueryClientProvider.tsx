@@ -12,9 +12,7 @@ export function QueryClientProvider(props: QueryClientProviderProps) {
   return (
     <TanStackQueryClientProvider client={queryClient}>
       {children}
-      <ReactQueryDevtools
-        initialIsOpen={false}        
-      />
+      <ReactQueryDevtools initialIsOpen={false} />
     </TanStackQueryClientProvider>
   );
 }

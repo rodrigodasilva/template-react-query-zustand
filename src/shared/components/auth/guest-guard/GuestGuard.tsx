@@ -10,7 +10,7 @@ type GuestGuardProps = {
 export function GuestGuard(props: GuestGuardProps) {
   const { isAuth, children } = props;
 
-  if (!isAuth) return <Navigate to={PATH_PAGE.root}/>;
+  if (!isAuth) return <Navigate to={PATH_PAGE.root} />;
 
   return <> {children} </>;
 }

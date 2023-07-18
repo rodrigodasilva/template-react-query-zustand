@@ -45,20 +45,12 @@ module.exports = {
       {
         patterns: [
           {
-            group: [
-              '~shared/*/*/**',
-              '~pages/*/**',
-              '~app/**',
-            ],
+            group: ['~shared/*/*/**', '~pages/*/**', '~app/**'],
             message:
               'Direct access to the internal parts of the module is prohibited',
           },
           {
-            group: [
-              '../**/shared',
-              '../**/pages',
-              '../**/app',
-            ],
+            group: ['../**/shared', '../**/pages', '../**/app'],
             message: 'Prefer absolute imports instead of relatives',
           },
         ],

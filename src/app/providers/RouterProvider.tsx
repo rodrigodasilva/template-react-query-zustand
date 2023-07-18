@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-imports */
 import { lazy } from 'react';
-import {  useRoutes } from 'react-router-dom';
+import { useRoutes } from 'react-router-dom';
 import { LoginPage } from '~pages/Login';
 import { AuthGuard } from '~shared/components/auth/auth-guard/AuthGuard';
 import { GuestGuard } from '~shared/components/auth/guest-guard/GuestGuard';
@@ -9,17 +9,13 @@ import { useAuthToken } from '~shared/store/session';
 
 // import { PATH_PAGE } from '~shared/lib/react-router';
 
-
-
 const HomePage = Loadable(lazy(() => import('~pages/Home')));
 
-
-
-export function Router() {  
-  const isAuth = !!useAuthToken();  
+export function Router() {
+  const isAuth = !!useAuthToken();
 
   return useRoutes([
-    {      
+    {
       children: [
         {
           path: '/',

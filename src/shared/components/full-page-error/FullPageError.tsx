@@ -1,4 +1,3 @@
-
 import styles from './fullPageError.module.css';
 
 type FullPageErrorProps = {
@@ -8,7 +7,7 @@ type FullPageErrorProps = {
 export function FullPageError(props: FullPageErrorProps) {
   const { error } = props;
 
-  return (    
+  return (
     <div className={styles.wrapper}>
       <div className="container">
         <h1 className="logo-font">Something went wrong:</h1>
