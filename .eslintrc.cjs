@@ -1,10 +1,14 @@
 module.exports = {
-  env: { browser: true, es2020: true },
+  env: {
+    browser: true,
+    es2020: true,
+  },
   extends: [
     'plugin:eslint-plugin-import/recommended',
     'plugin:react-hooks/recommended',
     'eslint-config-airbnb',
     'eslint-config-prettier',
+    'plugin:storybook/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -22,10 +26,22 @@ module.exports = {
       'error',
       {
         pathGroups: [
-          { pattern: 'react', group: 'builtin' },
-          { pattern: 'vite', group: 'builtin' },
-          { pattern: '~shared/**', group: 'internal' },
-          { pattern: '~pages/**', group: 'internal' },
+          {
+            pattern: 'react',
+            group: 'builtin',
+          },
+          {
+            pattern: 'vite',
+            group: 'builtin',
+          },
+          {
+            pattern: '~shared/**',
+            group: 'internal',
+          },
+          {
+            pattern: '~pages/**',
+            group: 'internal',
+          },
         ],
         pathGroupsExcludedImportTypes: ['builtin'],
         groups: [
@@ -36,8 +52,10 @@ module.exports = {
           'sibling',
           'index',
         ],
-        'newlines-between': 'never',
-        alphabetize: { order: 'asc', caseInsensitive: true },
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
       },
     ],
     'no-restricted-imports': [
@@ -58,7 +76,9 @@ module.exports = {
     ],
     'import/no-extraneous-dependencies': [
       'error',
-      { devDependencies: ['./vite.config.ts'] },
+      {
+        devDependencies: ['./vite.config.ts'],
+      },
     ],
   },
   overrides: [
@@ -97,7 +117,9 @@ module.exports = {
         'testing-library/no-debugging-utils': 'warn',
         'import/no-extraneous-dependencies': [
           'error',
-          { devDependencies: true },
+          {
+            devDependencies: true,
+          },
         ],
       },
     },
