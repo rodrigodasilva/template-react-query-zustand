@@ -1,1 +1,1 @@
-export { Loadable } from './Loadable';
+export { Loadable } from './loadable';

@@ -1,4 +1,4 @@
-import styles from './fullPageError.module.css';
+import styles from './full-page-error.module.css';
 
 type FullPageErrorProps = {
   error: any;

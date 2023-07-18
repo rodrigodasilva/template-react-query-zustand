@@ -2,7 +2,7 @@ import { addUser } from '~shared/store/session';
 
 import { useLogin } from '../api/session-api';
 
-export function LoginPage() {
+export default function LoginPage() {
   const login = useLogin();
 
   function handleSignin() {

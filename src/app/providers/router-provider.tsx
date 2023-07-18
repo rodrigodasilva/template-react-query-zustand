@@ -1,15 +1,14 @@
 /* eslint-disable no-restricted-imports */
 import { lazy } from 'react';
 import { useRoutes } from 'react-router-dom';
-import { LoginPage } from '~pages/Login';
-import { AuthGuard } from '~shared/components/auth/auth-guard/AuthGuard';
-import { GuestGuard } from '~shared/components/auth/guest-guard/GuestGuard';
+
+import { AuthGuard } from '~shared/components/auth/auth-guard/auth-guard';
+import { GuestGuard } from '~shared/components/auth/guest-guard/guest-guard';
 import { Loadable } from '~shared/components/loadable';
 import { useAuthToken } from '~shared/store/session';
 
-// import { PATH_PAGE } from '~shared/lib/react-router';
-
-const HomePage = Loadable(lazy(() => import('~pages/Home')));
+const HomePage = Loadable(lazy(() => import('~pages/home')));
+const LoginPage = Loadable(lazy(() => import('~pages/login')));
 
 export function Router() {
   const isAuth = !!useAuthToken();
