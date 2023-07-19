@@ -36,11 +36,15 @@ module.exports = {
             group: 'builtin',
           },
           {
-            pattern: '~shared/**',
+            pattern: '~api/**',
             group: 'internal',
           },
           {
             pattern: '~pages/**',
+            group: 'internal',
+          },
+          {
+            pattern: '~shared/**',
             group: 'internal',
           },
         ],

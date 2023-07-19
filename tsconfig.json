@@ -26,14 +26,15 @@
     "typeRoots": ["node_modules/@types", "types/"],
     "baseUrl": "./src",
     "paths": {
-      "~app": ["./app"],
-      "~app/*": ["./app/*"],
-
+      "~api": ["./api"],
+      "~api/*": ["./api/*"],      
+      
       "~pages": ["./pages"],
       "~pages/*": ["./pages/*"],
-
+      
       "~shared": ["./shared"],
-      "~shared/*": ["./shared/*"]
+      "~shared/*": ["./shared/*"],
+      
     }
   },
   "include": ["src", "types"],

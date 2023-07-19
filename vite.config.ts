@@ -26,7 +26,7 @@ export default defineConfig({
   preview: { open: true },
   resolve: {
     alias: {
-      '~app': path.resolve('src/app'),
+      '~api': path.resolve('src/api'),
       '~pages': path.resolve('src/pages'),
       '~shared': path.resolve('src/shared'),
     },

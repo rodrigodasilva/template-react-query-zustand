@@ -1,7 +1,7 @@
+import { useLogin } from '~api/session-api';
 import { Button } from '~shared/components/ui/button';
 import { addUser } from '~shared/store/session';
 
-import { useLogin } from '../api/session-api';
 
 export default function LoginPage() {
   const login = useLogin();

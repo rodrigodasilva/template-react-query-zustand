@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './button';
 
 const meta = {
-  title: 'Example/Button',
+  title: 'UI/Button',
   component: Button,
   parameters: {
     layout: 'centered',
@@ -27,6 +27,7 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
+    variant: 'secondary',
     children: 'Button',
   },
 };
