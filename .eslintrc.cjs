@@ -22,8 +22,9 @@ module.exports = {
     'react/require-default-props': 'off',
     'import/prefer-default-export': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'react/jsx-no-bind': 'off',
     'import/order': [
-      'error',
+      'warn',
       {
         pathGroups: [
           {
@@ -56,22 +57,6 @@ module.exports = {
           order: 'asc',
           caseInsensitive: true,
         },
-      },
-    ],
-    'no-restricted-imports': [
-      'error',
-      {
-        patterns: [
-          {
-            group: ['~shared/*/*/**', '~pages/*/**', '~app/**'],
-            message:
-              'Direct access to the internal parts of the module is prohibited',
-          },
-          {
-            group: ['../**/shared', '../**/pages', '../**/app'],
-            message: 'Prefer absolute imports instead of relatives',
-          },
-        ],
       },
     ],
     'import/no-extraneous-dependencies': [

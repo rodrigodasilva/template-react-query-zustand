@@ -1,3 +1,4 @@
+import { Button } from '~shared/components/ui/button';
 import { addUser } from '~shared/store/session';
 
 import { useLogin } from '../api/session-api';
@@ -24,9 +25,9 @@ export default function LoginPage() {
       <div className="container page">
         <h1>Login page</h1>
 
-        <button onClick={handleSignin} type="button">
+        <Button onClick={handleSignin} type="button">
           {login.isLoading ? '...loading' : 'login'}
-        </button>
+        </Button>
       </div>
     </div>
   );
