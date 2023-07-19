@@ -32,7 +32,6 @@
     "zustand": "^4.3.8"
   },
   "devDependencies": {
-    "@mswjs/data": "^0.13.0",
     "@storybook/addon-essentials": "^7.1.0",
     "@storybook/addon-interactions": "^7.1.0",
     "@storybook/addon-links": "^7.1.0",
