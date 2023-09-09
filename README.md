@@ -1,21 +1,25 @@
 ### Como rodar?
+
 1. Instale as dependências
-> npm install
+
+   > npm install
 
 2. Inicie o servidor de desenvolvimento
-> npm run dev
+   > npm run dev
 
 ##### Comandos opcionais
+
 - Testes
-> npm run test:run
+
+  > npm run test:run
 
 - Storybook
-> npm run storybook
+
+  > npm run storybook
 
 - Lint
-> npm run lint
+
+  > npm run lint
 
 - Formatação com prettier
-> npm run prettier
-
-
+  > npm run prettier

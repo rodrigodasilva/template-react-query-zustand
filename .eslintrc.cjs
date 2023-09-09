@@ -24,20 +24,48 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-no-bind': 'off',
+    'react/prop-types': 'off',
+    'no-unused-vars': 'warn',
     'import/order': [
       'warn',
       {
+        groups: [
+          ['builtin', 'external'],
+          'internal',
+          ['sibling', 'parent'],
+          'index',
+        ],
         pathGroups: [
           {
-            pattern: 'react',
-            group: 'builtin',
-          },
-          {
-            pattern: 'vite',
-            group: 'builtin',
-          },
-          {
             pattern: '~api/**',
+            group: 'internal',
+          },
+          {
+            pattern: '~lib/**',
+            group: 'internal',
+          },
+          {
+            pattern: '~services/**',
+            group: 'internal',
+          },
+          {
+            pattern: '~utils/**',
+            group: 'internal',
+          },
+          {
+            pattern: '~constants/**',
+            group: 'internal',
+          },
+          {
+            pattern: '~store/**',
+            group: 'internal',
+          },
+          {
+            pattern: '~models/**',
+            group: 'internal',
+          },
+          {
+            pattern: '~providers/**',
             group: 'internal',
           },
           {
@@ -45,19 +73,24 @@ module.exports = {
             group: 'internal',
           },
           {
-            pattern: '~shared/**',
+            pattern: '~components/**',
             group: 'internal',
           },
+          {
+            pattern: '~assets/**',
+            group: 'internal',
+          },
+          {
+            pattern: '../**',
+            group: 'internal',
+          },
+          {
+            pattern: './**',
+            group: 'internal',
+            position: 'after',
+          },
         ],
-        pathGroupsExcludedImportTypes: ['builtin'],
-        groups: [
-          'builtin',
-          'external',
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-        ],
+        pathGroupsExcludedImportTypes: ['internal'],
         alphabetize: {
           order: 'asc',
           caseInsensitive: true,

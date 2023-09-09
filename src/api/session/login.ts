@@ -1,12 +1,11 @@
 import { useMutation } from '@tanstack/react-query';
+import { axiosInstance } from '~api/axios-config';
+import { sessionKeys } from '~api/session/session-keys';
+import { UserLogin, UserSession } from '~models/user';
 
-import { UserLogin } from '~shared/interfaces/user';
-
-import { baseApi } from '../base-api';
-import { sessionKeys } from './session-keys';
-
-export const useLogin = () =>
+export const useLoginMutation = () =>
   useMutation({
     mutationKey: sessionKeys.mutation.login(),
-    mutationFn: (user: UserLogin) => baseApi.post('/posts', user),
+    mutationFn: (user: UserLogin) =>
+      axiosInstance.post<UserSession>('/login', user),
   });

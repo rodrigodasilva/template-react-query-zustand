@@ -27,14 +27,37 @@
     "baseUrl": "./src",
     "paths": {
       "~api": ["./api"],
-      "~api/*": ["./api/*"],      
+      "~api/*": ["./api/*"],
+
+      "~lib": ["./lib"],
+      "~lib/*": ["./lib/*"],
+
+      "~services": ["./services"],
+      "~services/*": ["./services/*"],
+      
+      "~utils": ["./utils"],
+      "~utils/*": ["./utils/*"],
+      
+      "~constants": ["./constants"],
+      "~constants/*": ["./constants/*"],
+
+      "~store": ["./store"],
+      "~store/*": ["./store/*"],
+
+      "~models": ["./models"],
+      "~models/*": ["./models/*"],
+
+      "~providers": ["./providers"],
+      "~providers/*": ["./providers/*"],
       
       "~pages": ["./pages"],
       "~pages/*": ["./pages/*"],
+
+      "~components": ["./components"],
+      "~components/*": ["./components/*"],      
       
-      "~shared": ["./shared"],
-      "~shared/*": ["./shared/*"],
-      
+      "~assets": ["./assets"],
+      "~assets/*": ["./assets/*"],
     }
   },
   "include": ["src", "types"],
